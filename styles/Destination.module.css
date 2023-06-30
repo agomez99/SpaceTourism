@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/assets/destination/background-destination-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.planetNavigation{
+color: #D0D6F9;
+font-size: 16px;
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.7px;
+height: 34px;
+flex-shrink: 0;
+}
+#planetNavigationItem{
+    margin-right: 5%;
+    text-decoration: none;
+}
+.planetIndex {
+    list-style: none;
+    display: inline-flex;
+    color: white;
+    padding-right: 10%;
+}
+
+.planetDistance {
+    display: flex;
+}
+.planetInfo{
+    width: 445px;
+height: 472px;
+flex-shrink: 0;
+}
+.planetName {
+    color: #FFF;
+    font-size: 100px;
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.planetDescription {
+    color: #D0D6F9;
+    font-size: 18px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    display: flex;
+    width: 444px;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.planetDistanceInfo {
+display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 12px;
+margin-right: auto;
+}
+.planetTravelTime{
+    display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 12px
+}
+
+.distance {
+color: #D0D6F9;
+font-size: 14px;
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.362px;
+text-transform: uppercase;
+}
+.travel{
+    color: #D0D6F9;
+font-size: 14px;
+font-family: Barlow Condensed;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.362px;
+text-transform: uppercase;
+}
+.distanceNumber, .travelNumber{
+    color: #FFF;
+font-size: 28px;
+font-family: Bellefair;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+

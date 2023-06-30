@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+}

@@ -1,55 +1,39 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import Nav from "../components/NavbarComponent"
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+        <title>Frontend Mentor | Space tourism website</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-
+      <Container>
+        <Nav />
+        <Row>
+          <Col md={6}>
+            <main className={styles.main}>
+              <h1 className={styles.title}>
+                SO, YOU WANT TO TRAVEL TO 
+              </h1>
+              <h2 className={styles.subtitle}>SPACE</h2>
+              <p className={styles.body}>
+                Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it.
+                Well sit back, and relax because we’ll give you a truly out of this world experience!
+              </p>
+            </main>
+          </Col>
+          <Col md={6}>
+          <div className={styles.exploreContainer}>
+          <button className={styles.explore}>
+          <p className={styles.exploreText}>EXPLORE</p>
+          </button>
+          </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
