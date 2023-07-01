@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
 .container {
     min-height: 100vh;
@@ -8,23 +10,70 @@
     background-image: url("/assets/crew/background-crew-desktop.jpg");
     background-position: center;
     background-size: cover;
-  }
-  
-.memberNavigation{
+}
+
+.memberNavigation {
     font-size: 8rem;
     text-decoration: none;
-    
+
 
 }
-#memberNavigationItem{
+
+#memberNavigationItem {
     text-decoration: none;
-    color:rgb(71, 71, 71);
+    color: rgb(71, 71, 71);
     cursor: pointer;
 
 
 }
-#memberNavigationItem:hover{
+
+#memberNavigationItem:hover {
     color: #FFFFFF;
     cursor: pointer;
+
+}
+
+.memberName {
+    color: #FFF;
+    font-size: 56px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.memberRole {
+    color: #FFF;
+    font-size: 32px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.memberBio {
+    display: flex;
+    width: 444px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #D0D6F9;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+.memberImageContainer{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.memberImage{
+   height:100%;
 
 }

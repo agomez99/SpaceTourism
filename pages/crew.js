@@ -22,9 +22,9 @@ const Crew = () => {
   // JSX for crew info section
   const memberInfo = (
     <div className={styles.memberInfo}>
-      <h1>{crewmember.name}</h1>
-      <p>{crewmember.role}</p>
-      <p>{crewmember.bio}</p>
+          <p className={styles.memberRole}>{crewmember.role}</p>
+      <h1 className={styles.memberName}>{crewmember.name}</h1>
+      <p className={styles.memberBio}>{crewmember.bio}</p>
     </div>
   )
 
@@ -33,7 +33,7 @@ const Crew = () => {
 
   // JSX for crew member image section
   const memberImage = (
-    <Image src={`/${crewmember.images.png}`} width={500} height={500} alt="planet" />
+    <Image src={`/${crewmember.images.png}`} width={500} height={500} alt="planet" className={styles.memberImage} />
   );
 
   // JSX for planet navigation section
@@ -71,7 +71,10 @@ const Crew = () => {
               </main>
             </Col>
             <Col md={6}>
-                {memberImage}
+              <div  className={styles.memberImageContainer}>
+              {memberImage}
+
+              </div>
             </Col>
           </Row>
         </Container>

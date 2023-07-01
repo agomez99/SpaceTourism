@@ -72,7 +72,7 @@ const Destination = () => {
             <Col md={6}>
               <main className={styles.main}>
                 <h1 className={styles.title}>
-                  01 Pick Your Destination
+                  <span className={styles.title1}>01</span>Pick Your Destination
                 </h1>
                 <div className={styles.planet}>
                   {planetImage}

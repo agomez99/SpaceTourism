@@ -10,10 +10,10 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
         <title>Frontend Mentor | Space tourism website</title>
       </Head>
-      <Container>
+      <Container fluid>
         <Nav />
-        <Row>
-          <Col md={6}>
+        <Row className={styles.row}>
+          <Col md={6} sm={12}>
             <main className={styles.main}>
               <h1 className={styles.title}>
                 SO, YOU WANT TO TRAVEL TO 
@@ -25,7 +25,7 @@ export default function Home() {
               </p>
             </main>
           </Col>
-          <Col md={6}>
+          <Col md={6} sm={12}>
           <div className={styles.exploreContainer}>
           <button className={styles.explore}>
           <p className={styles.exploreText}>EXPLORE</p>
