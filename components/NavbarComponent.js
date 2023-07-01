@@ -7,7 +7,7 @@ import Image from 'next/image';
 function NavbarComponet() {
   return (
     <Navbar expand="lg" className="bg">
-      <Navbar.Brand href="#home" className={styles.brand}>
+      <Navbar.Brand href="/" className={styles.brand}>
         <Image src="/assets/shared/logo.svg" width={50} height={50} alt="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

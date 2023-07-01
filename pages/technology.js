@@ -60,7 +60,7 @@ const Technology = () => {
                 <Container>
                     <NavbarComponent />
                     <Row>
-                        <Col md={6}>
+                        <Col md={6} sm={12}>
                             <main className={styles.main}>
                                 <div>
                                     {planetNavigation}
@@ -70,7 +70,7 @@ const Technology = () => {
                                 </div>
                             </main>
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} sm={12}>
                             {technologyImage}
                         </Col>
                     </Row>
