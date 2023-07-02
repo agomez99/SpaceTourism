@@ -39,7 +39,7 @@ const Destination = () => {
 
   // JSX for planet image section
   const planetImage = (
-    <Image src={`/${planet.images.png}`} width={500} height={500} alt="planet" />
+    <Image src={`/${planet.images.png}`} width={500} height={500} alt="planet" className={styles.planetImage} />
   );
 
   // JSX for planet navigation section
@@ -69,18 +69,18 @@ const Destination = () => {
           <NavbarComponent />
           <Row>
             <Col md={6}>
-              <main className={styles.main}>
-                <h1 className={styles.title}>
+            <h1 className={styles.title}>
                   <span className={styles.title1}>01</span>Pick Your Destination
                 </h1>
                 <div className={styles.planet}>
                   {planetImage}
                 </div>
-              </main>
             </Col>
             <Col md={6}>
+            <div className={styles.planetDetails}>
               <div>{planetNavigation}</div>
               <div>{planetInfo}</div>
+              </div>
             </Col>
           </Row>
         </Container>

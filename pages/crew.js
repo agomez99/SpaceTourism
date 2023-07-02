@@ -61,19 +61,25 @@ const Crew = () => {
           <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
-        <Container>
+        <Container fluid>
           <NavbarComponent />
-          <Row>
+          <div className={styles.titleContainer}>
+              <h1 className={styles.title}><span className={styles.titleSpan}>01</span>Meet your crew</h1>
+              </div>
+          <Row className={styles.row}>
+
             <Col md={6}>
               <main className={styles.main}>
               {memberInfo}
+              <div className={styles.memberNavigationContainer}>
                 {memberNavigation}
+                </div>
               </main>
+
             </Col>
             <Col md={6}>
               <div  className={styles.memberImageContainer}>
               {memberImage}
-
               </div>
             </Col>
           </Row>

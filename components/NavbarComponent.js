@@ -10,7 +10,7 @@ function NavbarComponet() {
       <Navbar.Brand href="/" className={styles.brand}>
         <Image src="/assets/shared/logo.svg" width={50} height={50} alt="logo" />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" ><Image src="/assets/shared/icon-hamburger.svg" alt="hamburder" width="24" height="24" /></Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={styles.nav}>
           <Nav.Link href="/" className={styles.navLink}>
