@@ -65,7 +65,7 @@ const Destination = () => {
           <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
           <title>Frontend Mentor | Space tourism website</title>
         </Head>
-        <Container>
+        <Container fluid>
           <NavbarComponent />
           <Row>
             <Col md={6}>
