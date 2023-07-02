@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
-
+.main{
+  display: flex;
+}
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -10,4 +12,193 @@
   background-image: url("/assets/technology/background-technology-desktop.jpg");
   background-position: center;
   background-size: cover;
+}
+.technologyHeader{
+  width: 250px;
+}
+.technologyNavigation {
+  display: flex;
+  flex-direction: column;
+  margin: 20% 5%;
+}
+.technologyContainer{
+  display: flex;
+
+}
+#navigationButton {
+  height: 80px;
+  width: 80px;
+  margin-bottom:30%;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, .25); /* Changed rgba transparency value from 25% to .25 for consistency */
+  border: 1px solid #FFF;
+}
+
+#navigationButton:hover {
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added position:relative to create stacking context for any positioned children */
+  border: none;
+  color:  black;
+  background-color: #FFF;
+}
+
+.navigationText {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Bellefair';
+  font-style: normal; /* Removed redundant inherit value */
+  font-weight: 400;
+  line-height: normal;
+  margin:0;
+}
+.technologyInfo{
+  margin-top: 20%;
+}
+.technologyTitle{
+  color: #FFF;
+  font-size: 28px;
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.725px;
+}
+.technologyHeader{
+  color: #D0D6F9;
+font-size: 16px;
+font-family: 'Barlow Condensed';
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.7px;
+}
+.technologyName{
+  color: #FFF;
+font-size: 56px;
+font-family: 'Bellefair';
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+.technologyDescription{
+  color: #D0D6F9;
+font-size: 18px;
+font-family: 'Barlow', sans-serif;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+}
+.technologyImageContainer{
+  display: inline-block;
+  margin-left: auto;
+  margin-top: auto;
+}
+.titleSpan{
+
+}
+.technologyImageMobile{
+  display: none;
+}
+@media (max-width: 600px) {
+
+  .technologyNavigation {
+    display: flex;
+    flex-direction:row;
+
+    justify-content: center;
+    align-items: center;
+    margin:2%;
+  }
+
+  #navigationButton {
+    height: 80px;
+    width: 80px;
+    margin-bottom:30%;
+    border-radius: 80px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .25); /* Changed rgba transparency value from 25% to .25 for consistency */
+    border: 1px solid #FFF;
+  }
+  .technologyContainer{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  
+}
+.technologyInfo{
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.technologyDescription{
+  color: #D0D6F9;
+text-align: center;
+font-size: 15px;
+font-family: 'Barlow', sans-serif;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+}
+.technologyHeader{
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.362px;
+}
+.main{
+  display: block;
+}
+.technologyImage{
+ display: none;
+
+}
+.technologyInfo{
+  margin-top:0%;
+}
+.technologyImageMobile{
+display: block;
+width:auto;
+height:auto;
+}
+#navigationButton {
+  height: 60px;
+  width:60px;
+  margin-bottom:30%;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, .25); /* Changed rgba transparency value from 25% to .25 for consistency */
+  border: 1px solid #FFF;
+}
+.technologyName{
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Bellefair';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
 }

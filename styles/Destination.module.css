@@ -44,6 +44,19 @@
 #planetNavigationItem {
     margin-right: 5%;
     text-decoration: none;
+    color: #D0D6F9;
+}
+
+
+
+#planetNavigationItem:hover,
+#planetNavigationItem:active {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 5px;
+    color: white;
+    cursor: pointer;
+
+
 }
 
 .planetIndex {

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import Head from 'next/head';
 import Image from 'next/image';
 import NavbarComponent from '../components/NavbarComponent';
 import styles from '../styles/Technology.module.css';
+
 const data = require("../public/data.json");
 
 const Technology = () => {
@@ -20,31 +21,35 @@ const Technology = () => {
     // JSX for technology info section
     const technologyInfo = (
         <div className={styles.technologyInfo}>
-            <h1>{technology.name}</h1>
-            <p>{technology.description}</p>
+            <p className={styles.technologyName}>{technology.name}</p>
+            <p className={styles.technologyDescription}>{technology.description}</p>
         </div>
     )
 
 
 
     // JSX for technology image section
-    const technologyImage = (
-        <Image src={`/${technology.images.portrait}`} width={500} height={500} alt="planet" />
+    const technologyImageDesktop = (
+        <Image src={`/${technology.images.portrait}`} width={500} height={500} alt="technology" className={styles.technologyImage} />
+    );
+
+    const technologyImageMobile = (
+        <Image src={`/${technology.images.landscape}`} width={500} height={500} alt="technology" className={styles.technologyImageMobile} />
     );
 
     // JSX for planet navigation section
-    const planetNavigation = (
+    const technologyNavigation = (
         <div className={styles.technologyNavigation}>
             {data.technology.map((item, index) => {
                 return (
-                    <a
+                    <Button
                         key={index}
-                        id={styles.technologyNavigationItem}
-                        className={index === techIndex ? styles.active : ""}
+                        id={styles.navigationButton}
+                        className={index === techIndex ? styles.active : null}
                         onClick={() => changeTechnology(index)}
                     >
-                        {item.name}
-                    </a>
+                        <p className={styles.navigationText}>{index + 1}</p>
+                    </Button>
                 );
             })}
         </div>
@@ -60,19 +65,29 @@ const Technology = () => {
                 <Container>
                     <NavbarComponent />
                     <Row>
-                        <Col md={6} sm={12}>
-                            <main className={styles.main}>
-                                <div>
-                                    {planetNavigation}
-                                    <p>The terminology...</p>
-                                    {technologyInfo}
+                        <p className={styles.technologyTitle}>
+                            <span className={styles.titleSpan}>03</span>SPACE TECHNOLOGY</p>
+                        <div className={styles.technologyContainer}>
+                            <Col lg={6} sm={12}>
+                                <main className={styles.main}>
+                                    <div className={styles.technologyNavigation}>
+                                        {technologyNavigation}
+                                    </div>
+                                    <div className={styles.technologyInfo}>
+                                        <p className={styles.technologyHeader}>THE TERMINOLOGY...</p>
+                                        {technologyInfo}
 
+                                    </div>
+                                </main>
+                            </Col>
+                            <Col lg={6} sm={12}>
+                                <div>
+                                    {technologyImageDesktop}
+                                    {technologyImageMobile}
                                 </div>
-                            </main>
-                        </Col>
-                        <Col md={6} sm={12}>
-                            {technologyImage}
-                        </Col>
+                            
+                            </Col>
+                        </div>
                     </Row>
                 </Container>
             </div>

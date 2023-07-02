@@ -15,6 +15,7 @@ const Destination = () => {
   const changePlanet = (index) => {
     setPlanet(data.destinations[index]);
     setPlanetIndex(index);
+
   };
 
   // JSX for planet info section
@@ -44,18 +45,16 @@ const Destination = () => {
   // JSX for planet navigation section
   const planetNavigation = (
     <div className={styles.planetNavigation}>
-      {data.destinations.map((item, index) => {
-        return (
-          <a
-            key={index}
-            id={styles.planetNavigationItem}
-            className={index === planetIndex ? styles.active : ""}
-            onClick={() => changePlanet(index)}
-          >
-            {item.name}
-          </a>
-        );
-      })}
+      {data.destinations.map(({ name }, index) => (
+        <a
+          key={index}
+          id={styles.planetNavigationItem}
+          className={index === planetIndex ? styles.active : ""}
+          onClick={() => changePlanet(index)}
+        >
+          {name}
+        </a>
+      ))}
     </div>
   );
 
@@ -88,7 +87,7 @@ const Destination = () => {
       </div>
     </div>
 
-    )
+  )
 }
 
 export default Destination
