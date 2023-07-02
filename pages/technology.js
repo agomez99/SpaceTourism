@@ -5,7 +5,7 @@ import Image from 'next/image';
 import NavbarComponent from '../components/NavbarComponent';
 import styles from '../styles/Technology.module.css';
 
-const data = require("../public/data.json");
+const data = require("/data.json");
 
 const Technology = () => {
     // States for the selected tech and its index
