@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import NavbarComponent from '../components/NavbarComponent';
 import styles from '../styles/Destination.module.css';
-const data = require("../data.json");
+const data = require("../public/data.json");
 
 const Destination = () => {
   // States for the selected planet and its index
