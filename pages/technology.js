@@ -29,7 +29,7 @@ const Technology = () => {
     );
 
     const technologyImageDesktop = (
-        <Image src={`/${technology.images.portrait}`} width={500} height={500} alt="technology" className={styles.technologyImage} />
+        <Image src={`/${technology.images.portrait}`} width={500} height={500} alt="technology" className={styles.technologyImage}  priority/>
     );
 
     const technologyImageMobile = (
