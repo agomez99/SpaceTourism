@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -8,27 +8,26 @@ import styles from '../styles/Technology.module.css';
 const data = require("../public/data.json");
 
 const Technology = () => {
-    // States for the selected tech and its index
-    const [technology, setTechnology] = React.useState(data.technology[0]);
-    const [techIndex, setTechIndex] = React.useState(0);
+    const [technology, setTechnology] = useState(data.technology[0]);
+    const [techIndex, setTechIndex] = useState(0);
 
-    // Function to change the selected planet
+    const setDefaults = () => {
+        setTechnology(data.technology[0]);
+        setTechIndex(0);
+    }
+
     const changeTechnology = (index) => {
         setTechnology(data.technology[index]);
         setTechIndex(index);
     };
 
-    // JSX for technology info section
     const technologyInfo = (
         <div className={styles.technologyInfo}>
             <p className={styles.technologyName}>{technology.name}</p>
             <p className={styles.technologyDescription}>{technology.description}</p>
         </div>
-    )
+    );
 
-
-
-    // JSX for technology image section
     const technologyImageDesktop = (
         <Image src={`/${technology.images.portrait}`} width={500} height={500} alt="technology" className={styles.technologyImage} />
     );
@@ -37,21 +36,21 @@ const Technology = () => {
         <Image src={`/${technology.images.landscape}`} width={500} height={500} alt="technology" className={styles.technologyImageMobile} />
     );
 
-    // JSX for planet navigation section
+
     const technologyNavigation = (
         <div className={styles.technologyNavigation}>
-            {data.technology.map((item, index) => {
-                return (
-                    <Button
-                        key={index}
-                        id={styles.navigationButton}
-                        className={index === techIndex ? styles.active : null}
-                        onClick={() => changeTechnology(index)}
-                    >
-                        <p className={styles.navigationText}>{index + 1}</p>
-                    </Button>
-                );
-            })}
+            {data.technology.map((item, index) => (
+                <Button
+                    key={index}
+                    id={styles.navigationButton}
+                    className={index === techIndex ? styles.active : styles.inactive}
+                    onClick={() => changeTechnology(index)}
+
+
+                >
+                    <p className={styles.navigationText}>{index + 1}</p>
+                </Button>
+            ))}
         </div>
     );
 
@@ -76,7 +75,6 @@ const Technology = () => {
                                     <div className={styles.technologyInfo}>
                                         <p className={styles.technologyHeader}>THE TERMINOLOGY...</p>
                                         {technologyInfo}
-
                                     </div>
                                 </main>
                             </Col>
@@ -85,15 +83,13 @@ const Technology = () => {
                                     {technologyImageDesktop}
                                     {technologyImageMobile}
                                 </div>
-                            
                             </Col>
                         </div>
                     </Row>
                 </Container>
             </div>
         </div>
-
-    )
+    );
 }
 
-export default Technology
+export default Technology;

@@ -1,9 +1,14 @@
+
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import Nav from "../components/NavbarComponent"
+import Nav from "../components/NavbarComponent";
 
-export default function Home() {
+const Home = () => {
+  const handleExploreClick = () => {
+    window.location.href = "/destination";
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -26,14 +31,16 @@ export default function Home() {
             </main>
           </Col>
           <Col md={6} sm={12}>
-          <div className={styles.exploreContainer}>
-          <button className={styles.explore}>
-          <p className={styles.exploreText}>EXPLORE</p>
-          </button>
-          </div>
+            <div className={styles.exploreContainer}>
+              <button className={styles.explore} onClick={handleExploreClick}>
+                <p className={styles.exploreText}>EXPLORE</p>
+              </button>
+            </div>
           </Col>
         </Row>
       </Container>
     </div>
   );
-}
+};
+
+export default Home;

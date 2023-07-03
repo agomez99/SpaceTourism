@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -7,18 +8,14 @@ import styles from '../styles/Destination.module.css';
 const data = require("../public/data.json");
 
 const Destination = () => {
-  // States for the selected planet and its index
   const [planet, setPlanet] = React.useState(data.destinations[0]);
   const [planetIndex, setPlanetIndex] = React.useState(0);
 
-  // Function to change the selected planet
   const changePlanet = (index) => {
     setPlanet(data.destinations[index]);
     setPlanetIndex(index);
-
   };
 
-  // JSX for planet info section
   const planetInfo = (
     <div className={styles.planetInfo}>
       <h1 className={styles.planetName}>{planet.name}</h1>
@@ -49,8 +46,9 @@ const Destination = () => {
         <a
           key={index}
           id={styles.planetNavigationItem}
-          className={index === planetIndex ? styles.active : ""}
+          className={index === planetIndex ? styles.active : ""  }
           onClick={() => changePlanet(index)}
+
         >
           {name}
         </a>
