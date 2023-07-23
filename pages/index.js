@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Nav from "../components/NavbarComponent";
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const handleExploreClick = () => {
@@ -10,6 +11,12 @@ const Home = () => {
   };
 
   return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
     <div className={styles.container}>
       <Head>
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
@@ -40,6 +47,7 @@ const Home = () => {
         </Row>
       </Container>
     </div>
+    </motion.div>
   );
 };
 

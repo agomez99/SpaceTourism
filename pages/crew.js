@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import NavbarComponent from '../components/NavbarComponent';
 import styles from '../styles/Crew.module.css';
+import { motion } from 'framer-motion';
+
 const data = require("../public/data.json");
 
 const Crew = () => {
@@ -55,6 +57,12 @@ const Crew = () => {
   );
 
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
     <div>
       <div className={styles.container}>
         <Head>
@@ -86,7 +94,7 @@ const Crew = () => {
         </Container>
       </div>
     </div>
-
+    </motion.div>
     )
 }
 

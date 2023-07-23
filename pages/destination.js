@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import NavbarComponent from '../components/NavbarComponent';
 import styles from '../styles/Destination.module.css';
+import { motion } from 'framer-motion';
+
 const data = require("../public/data.json");
 
 const Destination = () => {
@@ -57,6 +59,12 @@ const Destination = () => {
   );
 
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
     <div>
       <div className={styles.container}>
         <Head>
@@ -84,6 +92,7 @@ const Destination = () => {
         </Container>
       </div>
     </div>
+    </motion.div>
 
   )
 }
