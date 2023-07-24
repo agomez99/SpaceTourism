@@ -21,7 +21,6 @@ function NavbarComponet() {
             <span className={styles.span}>02</span> Crew</Nav.Link>
           <Nav.Link href="/technology" className={styles.navLink}>
             <span className={styles.span}>03</span> Technology</Nav.Link>
-
         </Nav>
       </Navbar.Collapse>
     </Navbar>

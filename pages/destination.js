@@ -22,7 +22,7 @@ const Destination = () => {
     <div className={styles.planetInfo}>
       <h1 className={styles.planetName}>{planet.name}</h1>
       <p className={styles.planetDescription}>{planet.description}</p>
-      <hr></hr>
+      <hr className={styles.hr} />
       <div className={styles.planetDistance}>
         <div className={styles.planetDistanceInfo}>
           <h3 className={styles.distance}>AVG. DISTANCE</h3>
@@ -45,7 +45,7 @@ const Destination = () => {
   const planetNavigation = (
     <div className={styles.planetNavigation}>
       {data.destinations.map(({ name }, index) => (
-        <a
+        <button
           key={index}
           id={styles.planetNavigationItem}
           className={index === planetIndex ? styles.active : ""  }
@@ -53,7 +53,7 @@ const Destination = () => {
 
         >
           {name}
-        </a>
+        </button>
       ))}
     </div>
   );

@@ -43,14 +43,14 @@ const Crew = () => {
     <div className={styles.memberNavigation}>
       {data.crew.map((item, index) => {
         return (
-          <a
+          <button
             key={index}
             id={styles.memberNavigationItem}
             className={index === memberIndex ? styles.active : ""}
             onClick={() => changeMember(index)}
           >
-          <span >.</span>
-          </a>
+          .
+          </button>
         );
       })}
     </div>

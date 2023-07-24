@@ -24,6 +24,7 @@ const Technology = () => {
 
     const technologyInfo = (
         <div className={styles.technologyInfo}>
+            <p className={styles.technologyHeader}>THE TERMINOLOGY...</p>
             <p className={styles.technologyName}>{technology.name}</p>
             <p className={styles.technologyDescription}>{technology.description}</p>
         </div>
@@ -80,13 +81,12 @@ const Technology = () => {
                                         {technologyNavigation}
                                     </div>
                                     <div className={styles.technologyInfo}>
-                                        <p className={styles.technologyHeader}>THE TERMINOLOGY...</p>
                                         {technologyInfo}
                                     </div>
                                 </main>
                             </Col>
                             <Col lg={6} sm={12}>
-                                <div>
+                                <div className='d-flex'>
                                     {technologyImageDesktop}
                                     {technologyImageMobile}
                                 </div>

@@ -106,7 +106,6 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 .explore:active::after {
   opacity: 0.1036275252699852;
   background-color: #FFFFFF

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 .main{
   display: flex;
+  margin-left: 10%;
 }
 .container {
   min-height: 100vh;
@@ -49,6 +50,10 @@
   color:  black;
   background-color: #FFF;
 }
+#navigationButton:focus {
+  color:  black;
+  background-color: #FFF;
+}
 
 .navigationText {
   text-align: center;
@@ -60,7 +65,7 @@
   margin:0;
 }
 .technologyInfo{
-  margin-top: 20%;
+  margin-top: 12%;
 }
 .technologyTitle{
   color: #FFF;
@@ -88,6 +93,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-transform: uppercase;
+
 }
 .technologyDescription{
   color: #D0D6F9;
@@ -102,8 +108,10 @@ line-height: 32px;
   margin-left: auto;
   margin-top: auto;
 }
-.titleSpan{
-
+.technologyImage{
+  width:70%;
+  height:70%;
+  margin-left:auto;
 }
 .technologyImageMobile{
   display: none;
@@ -113,30 +121,16 @@ line-height: 32px;
   .technologyNavigation {
     display: flex;
     flex-direction:row;
-
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     margin:2%;
   }
 
-  #navigationButton {
-    height: 80px;
-    width: 80px;
-    margin-bottom:30%;
-    border-radius: 80px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, .25); /* Changed rgba transparency value from 25% to .25 for consistency */
-    border: 1px solid #FFF;
-  }
   .technologyContainer{
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
-  
+}
+#navigationButton{
 }
 .technologyInfo{
   display: flex;
@@ -174,14 +168,16 @@ letter-spacing: 2.362px;
   margin-top:0%;
 }
 .technologyImageMobile{
-display: block;
-width:auto;
+display:block;
+width:100%;
 height:auto;
 }
 #navigationButton {
   height: 60px;
-  width:60px;
-  margin-bottom:30%;
+  width: 85px;
+  margin-bottom:10%;
+  margin-left: 10%;
+  margin-top: 10%;
   border-radius: 80px;
   display: flex;
   justify-content: center;

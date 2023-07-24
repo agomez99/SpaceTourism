@@ -3,7 +3,14 @@
 .nav {
     margin-left: auto;
     color: white;
-    margin-right: 15%;
+    padding-right: 20%;
+    font-family: 'Barlow Condensed';
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    height:80px;
+    width:1000px;
+    display: flex;
+
 }
 
 .brand {
@@ -14,28 +21,32 @@
 .navLink {
     color: #FFF;
     font-size: 16px;
-    font-family: Barlow Condensed;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.7px;
+    margin-right:10px;
+    margin-left: auto;
+    margin-top: 2%;
 
 }
+.navLink:hover {
+    color: #FFF;
+    border-bottom: 3px solid #ffffff;
+}
+
 
 .span {
     color: #FFF;
     font-size: 16px;
-    font-family: Barlow Condensed;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 2.7px;
-    padding-right: 10px;
+    display: inline-flex;
 }
 
 .bg {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(40.774227142333984px);
 
     margin-left: auto;
 }

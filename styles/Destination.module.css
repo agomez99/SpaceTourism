@@ -61,19 +61,22 @@
     margin-right: 5%;
     text-decoration: none;
     color: #D0D6F9;
+    border:none;
+    background-color: transparent;
 }
 
 
 
 #planetNavigationItem:hover,
-#planetNavigationItem:active {
+#planetNavigationItem:active,
+#planetNavigationItem:focus
+ {
     border-bottom: 3px solid #ffffff;
     padding-bottom: 5px;
     color: white;
     cursor: pointer;
-
-
 }
+
 .planet{
     position: relative;
     top: 50%;
@@ -137,7 +140,13 @@
     align-items: flex-start;
     gap: 12px
 }
+.hr{
+    height: 5px;
+    border-width: 2px;
+    border-color: beige;
 
+
+}
 .distance {
     color: #D0D6F9;
     font-size: 14px;
